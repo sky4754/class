@@ -1,0 +1,13 @@
+.box1 {
+    border: 1px solid red;
+    width: 1000px;
+    height: 1000px;
+}
+
+.img1 {
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    
+    margin: 250px;
+}
