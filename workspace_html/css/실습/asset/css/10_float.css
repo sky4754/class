@@ -20,3 +20,19 @@ article img {
     float: right;
     border-color: green;
 }
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.logo {
+    border: 1px solid red;
+    width: 200px;
+    display: inline-block;
+}
+
+.header {
+    text-align: center;
+}
