@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let value = true
+
+        if(!value) {
+            console.log('이거 true임')
+        }
+
+        let value2 = true
+
+        if(value2) {
+            console.log('참')
+        }
+
+        if(!value2) {
+            console.log('거짓')
+        }
+
+        let value3 = true
+
+        if(value3) {
+            console.log('참')
+        } else {
+            console.log('거짓')
+        }
+
+        let score = 85
+
+        if(score>=60) {
+            console.log('합격')
+        } else {
+            console.log('불합격')
+        }
+
+        if(score>=90) {
+            console.log('A')
+        } else { 
+            if(score >=80){
+                console.log('B')
+            } else {
+                console.log('C')
+            }
+
+        
+        }
+        // 위와 같은 형식이다.
+        if(score>=90) {
+            console.log('A')
+        } else if(score >=80){
+            console.log('B')
+        } else if(score >=70){
+            console.log('C')
+        } else {
+            console.log('D')
+        }
+
+        /* 
+             js에서
+             참(true)의 정의 : 거짓이 아닌 것
+             
+             거짓 : false, 0, undefined, NaN 
+        */
+
+        let frult = "apple"
+        if(frult == 'apple'){
+            console.log('사과')
+        } else if(frult == 'banana'){
+            console.log('바나나')
+        } else {
+            console.log('모름')
+        }
+
+        switch( frult ){
+            case 'apple' :
+                console.log('사과')
+                break
+            case 'banana' :
+                console.log('바나나')
+                break
+            default :
+                console.log('모름')
+                break    
+        }
+
+        let phone = 's23'
+        if(phone == 's23' ){
+            console.log('삼성')
+        } else if(phone == 's24'){
+            console.loh('삼성')
+        }
+
+        if(phone == 's23' || phone == 's24'){
+            console.log('삼성')
+        }
+
+        switch(phone){
+            case 's23':
+            case 's24':
+            case 's25':
+            case 's26':
+                console.log('삼성')
+                break
+            case 'i15':
+            case 'i16':
+            case 'i17':
+                console.log('애플')
+                break
+            default :
+                console.log('삼성, 애플 아님')
+                break
+        }
+
+        console.log('---------------------------------')
+
+        // 문제1
+        // 아무 숫자나 받아서 다음 형식으로 출력
+        // "양수" 또는 0 또는 "음수"
+        
+        console.log('--문제1--')
+        let = q1 = 0
+        if( q1 > 0 ) {
+            console.log('결과: 양수')
+        } else if( q1 == 0 ) {
+            console.log('결과: 0')
+        } else if( q1 < 0 ) {
+            console.log('결과: 음수')
+        }
+
+        // 문제2
+        // "홀수" 또는 "짝수" 출력
+        console.log('--문제2--')
+        let = q2 = 2
+        let result = q2 % 2 === 0 ? "짝수" : "홀수"
+        console.log(result)
+
+        // 문제3
+        // 두 수를 받아서
+        // 둘 중에 큰 값을 출력
+        // 3과 5중에 큰수 : 5
+        console.log('--문제3--')
+        let = q3('3, 5')
+
+        // 문제4 
+        // 임의의 money가 있을 때
+        // 7,000원 이상이면 "택시 타자" 출력
+        // 7,000원 미만 ~ 3,000원 이상이면 "버스 타자"
+        // 3,000원 미만이면 "걸어보자"
+        console.log('--문제4--')
+        let = q4 = 7000
+        if( q4 >= 7000 ) {
+            console.log('택시 타자')
+        } else if( q4 < 7000 > 3000 ) {
+            console.log('버스 타자')
+        }
+
+
+        // -- 도전
+        // 문제5 
+        // '가위' '바위' '보' 중에 하나만 입력
+        // 문제 5-1
+        // 컴퓨터는 항상 '바위'만 내는 경우
+        // 문제 5-2
+        // 이겼다 졌다 비겼다 출력
+
+        // 문제6 
+        // 임의의 수 3개 x, y, z
+        // z가  x~y 사이에 있는지 판단
+
+        // 문제7 
+        // 月을 입력 받아서 계절 출력
+        // 단, 13이나 -1같은걸 받으면 "다시 입력하세요" 출력
+
+        // 문제 8 
+        // 온도를 입력받아 다음처럼 출력
+        // 예: 32 입력
+        // "영상 32도 입니다"
+        // 예 -3(영하 3)
+        // "영하 3도 입니다"
+
+        // -- 맨탈 챙길 자신 있으면 도전
+
+        // 문제9 
+        // 시와 분을 입력 받아서 35분 후의 시간 출력
+        // 3, 51 입력
+        // 출력: 4시 26분
+
+        // 문제 10
+        // 두자리 숫자를 받아서
+        // 10의 자리와 1의 자리가 같은지 판단
+        // 예: 88 => 같음 , 89 => 다름
+
+        // 문제 11
+        // 369게임
+        // 어떤 수를 받아서 3,6,9가 있으면 "박수" 출력 , 없으면 그 숫자 출력
+        // 예: 31 => 박수 12=> 12
+
+        // 문제 12
+        // 사각형에서
+        // 좌상단 좌표 : x1:10 , y1:20
+        // 우하단 좌표 : x2:90 , y2:100
+        // 입력받은 좌표가 사각형에 겹치는가?
+
+        console.log('--------------------------------------')
+
+
+        let rand = Math.random()
+        console.log(rand)
+
+        // 0 <= 숫자 < 1 (랜덤)
+        
+        rand = parseInt(Math.random() * 10) % 3
+        console.log(rand)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

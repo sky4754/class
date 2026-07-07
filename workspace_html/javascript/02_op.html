@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         /* '=' 오른쪽 부터 계산이 된다. */
+        let j =10;
+        j = j + 1; 
+        j += 1;
+        j++; /* 1일때만 j++를 쓰고 이와 같이 j--도 1일때도 같이 쓴다. */
+
+        j--;
+
+        --j;
+        ++j;
+
+        let k = 10;
+        k++;
+        console.log('k++ 이후: '+ k)
+        ++k;
+        console.log('k++ 이후: '+ k)
+
+        k = 10;
+        console.log('k++', k++)
+        console.log('k', k)
+
+        k = 10;
+        console.log('++k', ++k)
+        console.log('k', k)
+
+        k = 10;
+        let m = k++ + 1;
+        // m? 11 , k? 11 
+
+        k = 10
+        m = ++k + k++
+        // m? 22 , k? 12
+        console.log(`m: ${m}, k: ${k}`)
+
+        k = 10 
+        m = k-- + ++k - --k // 10 + 10 - 9
+        // m? 11 k? 9
+        console.log(`m: ${m}, k: ${k}`)
+
+        console.log('-------------------------------------')
+
+        let boolA = true;
+        let boolB = false;
+        let result = boolA && boolB
+        console.log('and : ', result)
+
+        result = boolA || boolB
+        console.log('or : ', result)
+
+        console.log('!boolA', !boolA)
+
+        console.log( '같은가?', boolA == boolB )
+        console.log( '같지 않은가?', boolA != boolB )
+
+        let n = 3
+        let o = "3"
+        console.log("n == o", n == o)
+        console.log( typeof n )
+        console.log( typeof o )
+        console.log("n === o", n === o)
+        console.log("n !== o", n !== o)
+
+        console.log( typeof o == 'string')
+
+        let num = 2
+        result = (num % 2) == 0 ? '짝수' : '홀수';
+        console.log(result)
+
+        console.log('--문제--')
+
+        // 문제1 
+        // 난 돈이 10,000원 있음.
+        // 1. 4,800원 피스타치오를 최대 몇 잔 살 수 있는가
+        // 2. 그리고 남은 돈은?
+
+        let money = 10000
+        let cup = 4800 
+        console.log( '최대 몇 잔:', parseInt(money / cup) )
+        console.log( '남은 돈:', money % cup )
+
+        // 문제2 
+        // 올리브영에 꿀홍차 8,000원 입니다.
+        // 15% 세일!! 그렇다면 가격은?
+
+        let honey = 8000
+        console.log( '가격 :', honey * (15/100) )
+
+        // 문제3 
+        // 1234를 10의 자리 이하 버림.
+        // 결과 : 1200
+        
+        console.log( '결과 :', 1234 - (1234%100))
+
+        // 문제4 
+        // 두 값 1000, 794가 있을 때
+        // 1000 / 794의 결과를 소수점 2자리 까지만 출력
+        // 결과 : 1.25
+        
+        // console.log( '결과 :', (10000 / 794 / 100) )
+
+        let b1 = 1000
+        let b2 = 794
+        let b3 = parseInt((b1 / b2) * 100) / 100
+        console.log('결과 :',b3)
+
+        //문제5 
+        // 내 주머니에 17,000원 있을때,
+        // 5,000원과 1,000원 짜리 밖에 없을때
+        // 각각 몇 장씩 줄 수 있는가?
+        // 단, 최대한 5,000원을 많이 준다.
+        // 결과 : 5,000 3장 1,000원 2장
+
+        console.log( '5000원 장 수:', parseInt(17000 / 5000) )
+        console.log( '1000원 장 수:', (17000 % 5000) / 1000 ) 
+
+        console.log('--------------------------------------')
+
+        
+
+    </script>
+</head>
+<body>
+    <img src="https://image.fmkorea.com/files/attach/new3/20231007/486616/5350126819/6257882811/b54737f3713b4d7e5aeae9e9090e9095.png">
+</body>
+</html>
