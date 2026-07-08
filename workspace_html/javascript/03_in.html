@@ -91,7 +91,7 @@
         if(phone == 's23' ){
             console.log('삼성')
         } else if(phone == 's24'){
-            console.loh('삼성')
+            console.log('삼성')
         }
 
         if(phone == 's23' || phone == 's24'){
@@ -122,7 +122,7 @@
         // "양수" 또는 0 또는 "음수"
         
         console.log('--문제1--')
-        let = q1 = 0
+        let q1 = 0
         if( q1 > 0 ) {
             console.log('결과: 양수')
         } else if( q1 == 0 ) {
@@ -134,7 +134,7 @@
         // 문제2
         // "홀수" 또는 "짝수" 출력
         console.log('--문제2--')
-        let = q2 = 2
+        let q2 = 2
         let result = q2 % 2 === 0 ? "짝수" : "홀수"
         console.log(result)
 
@@ -143,7 +143,13 @@
         // 둘 중에 큰 값을 출력
         // 3과 5중에 큰수 : 5
         console.log('--문제3--')
-        let = q3('3, 5')
+
+        if( 3 < 5 ) {
+            console.log('5')
+        } else {
+            console.log('3')
+        }
+       
 
         // 문제4 
         // 임의의 money가 있을 때
@@ -151,17 +157,29 @@
         // 7,000원 미만 ~ 3,000원 이상이면 "버스 타자"
         // 3,000원 미만이면 "걸어보자"
         console.log('--문제4--')
-        let = q4 = 7000
+        let q4 = 4000
         if( q4 >= 7000 ) {
             console.log('택시 타자')
-        } else if( q4 < 7000 > 3000 ) {
+        } else if( q4 < 7000 && q4 <= 3000 ) {
             console.log('버스 타자')
+        } else {
+            console.log('걸어 보자')
         }
 
 
         // -- 도전
         // 문제5 
         // '가위' '바위' '보' 중에 하나만 입력
+
+        let q5 = parseInt(Math.random() * 10) % 3
+        if( 0 == q5 ) {
+            console.log('가위')
+        } else if( 1 == q5 ) {
+            console.log('바위')
+        } else {
+            console.log('보')
+        }
+
         // 문제 5-1
         // 컴퓨터는 항상 '바위'만 내는 경우
         // 문제 5-2
@@ -215,6 +233,10 @@
         
         rand = parseInt(Math.random() * 10) % 3
         console.log(rand)
+
+        // 0~2
+
+        rand = parseInt(Math.random() * 10)
 
     </script>
 </head>
