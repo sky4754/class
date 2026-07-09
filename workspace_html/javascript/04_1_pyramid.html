@@ -228,14 +228,20 @@
         }
         
         // 12단계
-        // 입력 받은 줄 수 대로 출력
+        // 입력 받은 줄 수 대로 출력 예시: Wll
         console.log('--12단계--')
 
         string = ''
 
         for(let a=1; a<=9; a++){
             string = ''
-            for(let b=9; b>=`${a}`; b--){
+            for(let c=1; c<=5; c++){
+                string = string + '-'
+            }
+            for(let c=1; c<=1; c++){
+                string = string + 'ㅁ'
+            }
+            for(let b=8; b>=`${a}`; b--){
                 string = string + '-'
             }
             for(let c=1; c<=1; c++){
@@ -244,21 +250,35 @@
             for(let d=2; d<=`${a}`; d++){
                 string = string + '-'
             }
-            for(let e=1; e>=1; e--){
-                string = string + 'ㅁ'
-            }
+            // for(let e=1; e<=1; e++){
+            //     string = string + 'ㅁ'
+            // }
             for(let f=2; f<=`${a}`; f++){
                 string = string + '-'
             }
-            for(let f=1; f<=1; f++){
+            for(let g=1; g<=1; g++){
                 string = string + 'ㅁ'
             }
-            for(let f=9; f>=`${a}`; f--){
+            for(let h=8; h>=`${a}`; h--){
                 string = string + '-'
+            }
+            for(let i=1; i<=1; i++){
+                string = string + 'ㅁ'
+            }
+            for(let j=1; j<=10; j++){
+                string = string + '-'
+            }
+            for(let k=1; k<=1; k++){
+                string = string + 'ㅁ'
+            }
+            for(let l=1; l<=8; l++){
+                string = string + '-'
+            }
+            for(let m=1; m<=1; m++){
+                string = string + 'ㅁ'
             }
             console.log(string)
         }
-       
 
     </script>
 </head>

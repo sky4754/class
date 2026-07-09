@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 문제 5-2
+        // 이겼다 졌다 비겼다 출력
+        // 1. 컴퓨터가 랜덤으로 선택하게 만들기
+        // 2. 사용자의 선택 받기
+        // 3. 승패 결정하기
+        let rand = Math.random() // 0 <= rand < 1
+        rand = parseInt( rand * (2+1) ) // 0~2까지 랜덤
+        // 0: 가위 1: 바위 2: 보
+        // let user '가위'
+        let user = prompt('가위바위보 중에 하나 적으시오')
+        if(rand == 0) { // 컴퓨터가 가위
+            if(user == '가위'){
+                console.log('비겼다')
+            } else if(user == '바위'){
+                console.log('이겼다')
+            } else {
+                console.log('졌다')
+            }
+        }
+        if(rand == 1) { // 컴퓨터가 바위
+            if(user == '바위'){
+                console.log('비겼다')
+            } else if(user == '보'){
+                console.log('이겼다')
+            } else {
+                console.log('졌다')
+            }
+        }
+        if(rand == 2) { // 컴퓨터가 보
+            if(user == '보'){
+                console.log('비겼다')
+            } else if(user == '가위'){
+                console.log('이겼다')
+            } else {
+                console.log('졌다')
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
