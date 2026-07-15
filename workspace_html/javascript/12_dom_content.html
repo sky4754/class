@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="msg">
+        <span>원래</span> 있던     글씨
+    </div>
+
+    <div id="count">0</div>
+
+    <div id="clock">시계 로딩중....</div>
+
+    <div id="log">원래 있던 글씨</div>
+
+    <table border="1">
+        <tbody id="tbody">
+            <!-- <tr>
+                <td>첫째칸</td>
+            </tr> -->
+        </tbody>
+    </table>
+    <table border="1">
+        <thead>
+            
+            <tr>
+                <th>제목1</th>
+                <th>작성자1</th>
+            </tr>
+            
+        </thead>
+        <tbody id="board">
+
+        </tbody>
+    </table>
+
+    <script>
+        const msg = document.querySelector('#msg')
+        console.log(msg)
+
+        // 태그 안쪽의 글씨들(컨텐츠) 가져오는 방법들
+
+        // textContent
+        // 컨텐츠 영역의 소스 중에서 text(글씨)만 그대로 가져온다.
+        console.log('msg.Content', msg.textContent)
+
+        // innerText
+        // 브라우저에 보이는 글씨로 가져온다
+        // - 브라우저가 보여줄 내용에 대한 계산이 끝나고 실제로 표시하는 text
+        console.log('msg.innerText', msg.innerText)
+
+        // innerHtml
+        console.log('msg.innerHTML', msg.innerHTML)
+
+        // 위의 것은 변수의 내용을 읽은거고
+        // 이제부터 변수에 깂을 담으면
+        // 컨텐츠의 내용을 바꿔준다
+        
+        // textContent, innerText는 tag로 인식한다.
+        msg.textContent = '<h1>h1제목</h1> a    b   c'
+        msg.innerText = '<h1>h1제목</h1> a    b   c'
+
+        // innerHTML은 tag는 tag로 인식한다.
+        msg.innerHTML = '<h1>h1제목</h1> a    b   c'
+        msg.innerHTML +='d'
+
+        msg.innerHTML = '<a href="javascript:alert(1);alert(2);">눌러봐</a>'
+
+
+        // const count = document.querySelector('#count')
+        console.log(count)
+        setInterval( function(){
+            const count = document.querySelector('#count')
+            let cnt = count.textContent
+            // console.log(cnt, typeof cnt)
+
+            cnt = Number(cnt) + 1
+            count.innerText = cnt
+        }, 1000)
+
+        // #clock에 시간을 "몇 분 몇 초"가 나오게 계속 갱신하게
+        const clock = document.querySelector('#clock')
+        // console.log(clock)
+        setInterval( function(){
+            const now = new Date()
+            const hour = now.getHours()
+            const min = now.getMinutes()
+            const seo = now.getSeconds()
+            // const ms = now.getMilliseconds()
+
+            const time = (`${hour}시 ${min}분 ${seo}초`)
+            clock.textContent = time
+        }, 5000)
+
+        //--------------------------------
+
+        ///////////
+        // DOM 생성
+        ///////////
+
+        // DOM 요소 생성
+        const div = document.createElement('div') // <div></div>
+        console.log(div)
+        // <div id="lol"></div)
+        div.setAttribute('id', 'lol')
+        // <div id="lol">정글차이</div)
+        div.innerText = '정글차이'
+        console.log(div)
+
+        div.setAttribute('style', 'color:red;')
+
+        const log = document.querySelector('#log')
+        // append
+        // 마지막 자식 요소로 추가된다.
+        log.append(div)
+        log.append('<h1>abcd</h1>')
+
+        // 같은 객체를 두번 append할 때 조심!!
+        // 같은 객체는 이동된다
+        log.append(div)
+
+        const p = document.createElement('p')
+        p.textContent = 'p태그'
+
+        // appendChild
+        // append 처럼 마지막 자식 요소로 추가된다
+        // DOM만 넣을 수 있다
+        log.appendChild(p)
+        // log.appendChild('<h1>글씨일 뿐 이다</h1>')
+
+        const p2 = document.createElement('p2')
+        p2.textContent = 'p2'
+
+        // prepend : 첫번째 자식 요소로 추가
+        log.prepend(p2)
+
+        
+        const p3 = document.createElement('p3')
+        p3.textContent = 'p3'
+        // before : 이전 형제로 추가
+        log.before(p3)
+
+        const p4 = document.createElement('p4')
+        p4.textContent = 'p4'
+        // after : 이후 형제로 추가
+        log.after(p4)
+
+            // <tr>
+            //     <td>첫째칸</td>
+            // </tr>
+
+        // let tr = document.createElement('tr')
+        // let td = document.createElement('td')
+        // td.innerText = '첫번째칸'
+
+        
+        // tr.append(td)
+        // let tbody = document.querySelector('#tbody')
+        // tbody.prepend(tr)
+        
+        /*
+      <tr>
+        <td>제목</td>
+        <td>작성자</td>
+      </tr>    
+      */
+
+        const rows = [
+            ['제목1', '작성자1'],
+            ['제목2', '작성자2'],
+            ['제목3', '작성자3'],
+            ['제목4', '작성자4'],
+            ['제목5', '작성자5']
+        ]
+        a = ['제목2', '작성자2']
+        console.log(a) 
+        rows[0][0]
+
+
+        // let tr1 = document.createElement('tr') // <tr></tr>
+        // let td1 = document.createElement('td')
+        // let td2 = document.createElement('td')
+
+        // let tr2 = document.createElement('tr') // <tr></tr>
+        // let td3 = document.createElement('td')
+        // let td4 = document.createElement('td')
+        // td1.innerText = rows[0][0]
+        // td2.innerText = rows[0][1]
+
+        // td3.innerText = rows[1][0]
+        // td4.innerText = rows[1][1]
+
+        // let board = document.querySelector('#board')
+        // tr1.append(td1)
+        // tr1.append(td2)
+        // board.prepend(tr1)
+
+        // tr2.append(td3)
+        // tr2.append(td4)
+        // board.prepend(tr2)
+
+        for(let j=0; j<rows.length; j++){
+           let tr = document.createElement('tr') // <tr></tr>
+           let td = document.createElement('td')
+        }
+        
+
+        td.innerText = rows[j][0]
+        let board = document.querySelector('#board')
+        tr.append(td)
+        board.prepend(tr)
+
+        
+
+        
+
+
+    
+       
+
+       
+
+
+    </script>
+</body>
+</html>
