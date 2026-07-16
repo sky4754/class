@@ -12,9 +12,11 @@
 
     <div id="count">0</div>
 
-    <div id="clock">시계 로딩중....</div>
+    <div id="clock"></div>
 
     <div id="log">원래 있던 글씨</div>
+
+    <div class="quiz q1">힌트만 주라</div>
 
     <table border="1">
         <tbody id="tbody">
@@ -23,6 +25,7 @@
             </tr> -->
         </tbody>
     </table>
+    <hr>
     <table border="1">
         <thead>
             
@@ -33,9 +36,26 @@
             
         </thead>
         <tbody id="board">
+            
 
         </tbody>
     </table>
+    <hr>
+    <table border="1">
+        <thead>
+            
+            <tr>
+                <th>제목1</th>
+                <th>작성자1</th>
+            </tr>
+            
+        </thead>
+        <tbody id="board2">
+            
+
+        </tbody>
+    </table>
+
 
     <script>
         const msg = document.querySelector('#msg')
@@ -83,7 +103,6 @@
 
         // #clock에 시간을 "몇 분 몇 초"가 나오게 계속 갱신하게
         const clock = document.querySelector('#clock')
-        // console.log(clock)
         setInterval( function(){
             const now = new Date()
             const hour = now.getHours()
@@ -93,7 +112,7 @@
 
             const time = (`${hour}시 ${min}분 ${seo}초`)
             clock.textContent = time
-        }, 5000)
+        }, 500)
 
         //--------------------------------
 
@@ -202,28 +221,124 @@
         // tr2.append(td4)
         // board.prepend(tr2)
 
-        for(let j=0; j<rows.length; j++){
-           let tr = document.createElement('tr') // <tr></tr>
-           let td = document.createElement('td')
-        }
+        // for(let j=0; j<rows.length; j++){
+        //    let tr = document.createElement('tr') // <tr></tr>
+        //    let td = document.createElement('td')
+        // }
         
 
-        td.innerText = rows[j][0]
-        let board = document.querySelector('#board')
-        tr.append(td)
-        board.prepend(tr)
+        // td.innerText = rows[j][0]
+        // let board = document.querySelector('#board')
+        // tr.append(td)
+        // board.prepend(tr)
 
-        
-
-        
-
-
+     
     
-       
+    
+    let board2 = document.querySelector('#board2')
+    for(let i=0; i<rows.length; i++){
+        let html = `
+                <tr>
+                    <td>${rows[i][0]}</td>
+                    <td>${rows[i][1]}</td>
+                </tr>
+     `
+    board2.innerHTML += html 
+    // board2.innerHTML = html + board2.innerHTML
+    }
 
-       
+    let str = ''
+    for(let i=0; i<5; i++){
+        str = i + str 
+    }
+    console.log(str)
 
+    // const body = document.querySelector('body')
+    // const style = document.createElement('style') // <style></style>
+    // /*
+    //         <style>
+    //             #board {
+    //                 border : 1px solid red;
+    //             }
+    //         </style>
+    // */
+    // style.innerText = `
+    //     #board2 {
+    //         border : 1px solid red;
+    //     } 
+    // `
+    // body.append(style)
 
-    </script>
+    // const script = document.createElement('script')
+    // script.innerText = `
+    //         alert(1)
+    // `
+    // body.append(script)
+
+    ////////////////////////////
+    // style
+
+    const clock1 = document.getElementById('clock')
+    // CSS에서 -로 연결도는 프로퍼티 명은
+    // 카멜케이스(단어를 대문자로 연결)로 변경해서 사용하면 된다
+    // font-size >>>> fontSize
+    // background-color >>>> blockgroundColor
+    
+    clock1.style.color = 'red'
+    clock1.style.fontSize = '1.5em'
+
+    console.log(clock1.style.color)
+    console.log(clock1.style.height)
+    clock1.style.height = '50px'
+    console.log(clock1.style.height)
+
+    let w = window.getComputedStyle(clock1, null).getPropertyValue('width')
+    console.log('w', w)
+
+    clock1.style.border = '1px solid salmon'
+
+    let h = parseInt(Math.random() * 100) + 'px'
+    console.log(clock1.style.height)
+
+    // 기존 높이보다 크게 5px 크게
+    // 66px + 5 : 66px5
+    // console.log(Number('66px')) // NaN
+    // console.log(parseInt('66px')) + 5 
+    clock1.style.height = parseInt(clock1.style.height) + 5 + 'px'
+    console.log(clock.style.height)
+
+    //문제 1 
+    // <div class='quiz q1'>힌트만 달라</div>
+    // 글씨 마지막 "쮸인님~♥" 붙이기
+    // "힌트만 달라 쮸인님~♥"
+
+    const q1 = document.getElementsByClassName('quiz q1')
+    
+    
+    
+    
+    //문제 2
+    /*
+        <div class='quiz q2'>퀴즈2</div>
+        <div class='quiz q2-1'>퀴즈2-1</div>
+        <div class='quiz q2-2'>퀴즈2-2</div>
+        <div class='quiz q2'></div>
+        <div class='quiz q2-1'>퀴즈2-1</div>
+    */
+
+    // 위 코드 중에 클래스 q2가 몇개인가?
+    // 답: 2개
+
+    //문제 3
+    // 위 코드에서 q2를 가지는 태그의 글씨를 출력하시오
+    /* 
+      퀴즈2-1
+
+    */
+
+    // 문제4
+    // 위 코드 중 글씨가 없는 태그의 내용을 "비어있음"으로 바꾼다 
+
+   </script>
 </body>
 </html>

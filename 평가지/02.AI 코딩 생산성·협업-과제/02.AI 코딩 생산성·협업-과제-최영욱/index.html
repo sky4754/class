@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="웹 개발, 백엔드, AI 데이터 분석 교육을 제공하는 IT 전문 교육 기관입니다.">
+  <title>코드업 IT 아카데미</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <canvas id="network-canvas" aria-hidden="true"></canvas>
+  <div class="top-progress" aria-hidden="true"><span></span></div>
+  <header class="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">CODE<span>UP</span></a>
+      <nav class="navigation" aria-label="주요 메뉴">
+        <ul class="nav-menu">
+          <li><a href="#home">홈</a></li><li><a href="#courses">교육 과정</a></li><li><a href="#advantages">교육 특징</a></li><li><a href="#reviews">수강 후기</a></li><li><a href="#contact">상담 신청</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="menu-button" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-label"><span class="status-dot"></span> NEXT-GEN IT CAREER LAB</p>
+          <h1>배우는 것에서 끝나지 않고<br><strong>취업까지 연결되는 교육</strong></h1>
+          <p class="hero-description">웹 개발, 백엔드, 인공지능과 데이터 분석을 하나의 실무 흐름으로 연결합니다. 코드 작성부터 협업, 테스트, 배포까지 기술이 실제 서비스가 되는 과정을 경험하세요.</p>
+          <div class="hero-tech-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Python</span><span>AI · DATA</span></div>
+          <div class="hero-buttons"><a href="#courses" class="button primary-button">교육 과정 보기</a><a href="#contact" class="button secondary-button">무료 상담 신청</a></div>
+          <ul class="hero-info"><li><strong>1,200+</strong><span>누적 수강생</span></li><li><strong>92%</strong><span>교육 만족도</span></li><li><strong>85%</strong><span>취업 연계율</span></li></ul>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-interface">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="floating-chip chip-one"><span>●</span> CLOUD CONNECTED</div>
+            <div class="floating-chip chip-two"><strong>98.7%</strong><small>PROJECT BUILD</small></div>
+            <div class="floating-chip chip-three"><span class="signal-bars"><i></i><i></i><i></i></span> LIVE SYSTEM</div>
+            <div class="code-window">
+              <div class="code-window-header">
+                <div class="window-dots"><span></span><span></span><span></span></div>
+                <p>career_engine.js</p>
+                <span class="window-state">ONLINE</span>
+              </div>
+              <div class="code-window-body">
+                <p><span class="code-purple">const</span> <span class="code-blue">student</span> = <span class="code-yellow">{</span></p>
+                <p class="code-indent">name: <span class="code-green">'미래의 개발자'</span>,</p>
+                <p class="code-indent">skills: <span class="code-cyan">['WEB', 'SERVER', 'AI']</span>,</p>
+                <p class="code-indent">growth: <span class="code-orange">Infinity</span>,</p>
+                <p class="code-indent">status: <span class="code-green">'READY_TO_DEPLOY'</span></p>
+                <p><span class="code-yellow">}</span>;</p>
+                <p class="terminal-line"><span>›</span> initializeCareer(student)<i class="typing-cursor"></i></p>
+              </div>
+              <div class="system-meter">
+                <span>LEARNING PIPELINE</span>
+                <div><i></i></div>
+                <strong>ACTIVE</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="section courses-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">CURRICULUM</p><h2>배우고, 만들고, 배포하는 실무 과정</h2>
+          <p>문법만 외우는 수업이 아니라 실제 서비스가 완성되는 전체 개발 과정을 경험합니다.</p>
+        </div>
+        <div class="course-list">
+          <article class="course-card course-frontend">
+            <div class="course-media">
+              <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="./assets/posters/frontend.png" aria-label="프론트엔드 화면 제작 과정 미리보기"><source src="./assets/videos/frontend.mp4" type="video/mp4"></video>
+              <span class="media-badge"><span class="live-dot"></span> LIVE LAB · FRONTEND</span>
+            </div>
+            <div class="course-body">
+              <div class="course-heading-row"><div class="course-icon">💻</div><span class="course-duration">6개월 · 프로젝트 4회</span></div>
+              <p class="course-category">WEB DEVELOPMENT</p><h3>프론트엔드 개발자 과정</h3>
+              <p class="course-summary">사용자가 직접 보고 조작하는 웹 화면을 설계하고, 반응형 UI와 동적인 기능을 구현합니다. 기획안을 웹페이지로 옮기는 것부터 실제 배포까지 진행합니다.</p>
+              <div class="course-project"><strong>대표 프로젝트</strong><span>기업 홍보 사이트 · 쇼핑몰 UI · 대시보드</span></div>
+              <ul><li>시맨틱 HTML과 접근성</li><li>CSS 레이아웃·반응형 디자인</li><li>JavaScript DOM·API 활용</li><li>GitHub를 이용한 협업과 배포</li></ul>
+              <a href="#contact">과정 상담하기 <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="course-card course-backend">
+            <div class="course-media">
+              <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="./assets/posters/backend.png" aria-label="백엔드 서버와 데이터 흐름 미리보기"><source src="./assets/videos/backend.mp4" type="video/mp4"></video>
+              <span class="media-badge"><span class="live-dot"></span> LIVE LAB · BACKEND</span>
+            </div>
+            <div class="course-body">
+              <div class="course-heading-row"><div class="course-icon">⚙️</div><span class="course-duration">7개월 · 프로젝트 3회</span></div>
+              <p class="course-category">BACKEND DEVELOPMENT</p><h3>백엔드 개발자 과정</h3>
+              <p class="course-summary">로그인, 게시판, 결제처럼 서비스 내부에서 작동하는 핵심 기능을 개발합니다. 서버 구조와 데이터베이스 설계를 이해하고 안정적인 API를 구축합니다.</p>
+              <div class="course-project"><strong>대표 프로젝트</strong><span>회원 관리 API · 예약 시스템 · 커뮤니티 서버</span></div>
+              <ul><li>Java 또는 Python 프로그래밍</li><li>REST API와 서버 구조 설계</li><li>SQL·데이터베이스 모델링</li><li>인증·보안·서버 배포 기초</li></ul>
+              <a href="#contact">과정 상담하기 <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="course-card course-ai">
+            <div class="course-media">
+              <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="./assets/posters/ai-data.png" aria-label="AI 데이터 분석 과정 미리보기"><source src="./assets/videos/ai-data.mp4" type="video/mp4"></video>
+              <span class="media-badge"><span class="live-dot"></span> LIVE LAB · AI DATA</span>
+            </div>
+            <div class="course-body">
+              <div class="course-heading-row"><div class="course-icon">🤖</div><span class="course-duration">6개월 · 프로젝트 3회</span></div>
+              <p class="course-category">AI & DATA</p><h3>AI·데이터 분석 과정</h3>
+              <p class="course-summary">데이터를 수집하고 정리한 뒤 시각화와 통계 분석을 통해 의미 있는 결과를 도출합니다. 머신러닝 모델을 학습시키고 성능을 검증하는 과정을 익힙니다.</p>
+              <div class="course-project"><strong>대표 프로젝트</strong><span>매출 분석 · 사용자 예측 · AI 분류 모델</span></div>
+              <ul><li>Python·Pandas 데이터 처리</li><li>차트와 대시보드 시각화</li><li>머신러닝 모델 학습·평가</li><li>분석 보고서와 결과 발표</li></ul>
+              <a href="#contact">과정 상담하기 <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="section advantages-section">
+      <div class="container">
+        <div class="section-heading"><p class="section-label">WHY CODEUP</p><h2>교육의 완성도를 높이는 체계적인 학습 시스템</h2><p>기초 학습부터 프로젝트, 포트폴리오, 취업 준비까지 하나의 과정으로 연결합니다.</p></div>
+        <div class="advantage-list">
+          <article class="advantage-item">
+            <div class="advantage-top"><span class="advantage-number">01</span><span class="advantage-icon">⌘</span></div>
+            <h3>기업 실무 프로세스를 반영한 프로젝트 교육</h3>
+            <p>강사의 코드를 그대로 따라 입력하는 방식이 아니라 요구사항 분석, 화면 및 데이터 설계, 기능 구현, 테스트, 배포까지 실제 개발 업무와 유사한 순서로 진행합니다. 수강생은 프로젝트마다 역할과 일정을 관리하며 문제 해결 과정까지 경험합니다.</p>
+            <ul class="advantage-points"><li>기획서와 요구사항 분석</li><li>팀 단위 코드 리뷰</li><li>테스트 및 결과 발표</li></ul>
+          </article>
+          <article class="advantage-item">
+            <div class="advantage-top"><span class="advantage-number">02</span><span class="advantage-icon">✓</span></div>
+            <h3>개인별 학습 수준을 반영한 피드백 시스템</h3>
+            <p>과제 결과와 프로젝트 코드를 기준으로 개인별 이해도와 취약 영역을 확인합니다. 단순한 정답 제공이 아니라 코드 구조, 가독성, 오류 원인, 개선 방향을 함께 설명하여 스스로 문제를 해결할 수 있는 개발 습관을 형성합니다.</p>
+            <ul class="advantage-points"><li>주간 학습 진단</li><li>1:1 코드 피드백</li><li>취약 영역 보충 자료</li></ul>
+          </article>
+          <article class="advantage-item">
+            <div class="advantage-top"><span class="advantage-number">03</span><span class="advantage-icon">◇</span></div>
+            <h3>채용 담당자 관점의 포트폴리오 설계</h3>
+            <p>완성 화면만 보여주는 포트폴리오가 아니라 프로젝트 목표, 담당 기능, 기술 선택의 이유, 문제 해결 과정과 개선 결과가 명확하게 전달되도록 구성합니다. GitHub 저장소와 발표 자료까지 함께 정리하여 실무 역량을 증명합니다.</p>
+            <ul class="advantage-points"><li>프로젝트 문서화</li><li>GitHub 저장소 정리</li><li>기술 면접 발표 준비</li></ul>
+          </article>
+          <article class="advantage-item">
+            <div class="advantage-top"><span class="advantage-number">04</span><span class="advantage-icon">↗</span></div>
+            <h3>직무 분석에 기반한 단계별 취업 지원</h3>
+            <p>희망 직무와 현재 역량을 분석하여 지원 전략을 세우고, 이력서와 자기소개서 첨삭부터 모의 기술 면접까지 단계적으로 지원합니다. 채용 공고에 사용되는 기술 용어를 이해하고 자신의 경험과 연결해 설명하도록 훈련합니다.</p>
+            <ul class="advantage-points"><li>직무·기업 분석</li><li>서류 첨삭</li><li>기술·인성 모의 면접</li></ul>
+          </article>
+        </div>
+        <div class="process-strip"><span>기초 이론</span><i>→</i><span>개인 실습</span><i>→</i><span>팀 프로젝트</span><i>→</i><span>포트폴리오</span><i>→</i><span>취업 준비</span></div>
+      </div>
+    </section>
+
+    <section id="reviews" class="section reviews-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-label">STUDENT REVIEW</p>
+          <h2>수강생이 직접 평가한 과정 후기</h2>
+          <p>배운 내용, 프로젝트 경험, 난이도와 아쉬웠던 점까지 과정별로 자세히 확인해 보세요.</p>
+        </div>
+
+        <div class="review-summary">
+          <div class="review-summary-score">
+            <span>AVERAGE RATING</span>
+            <strong>4.7<small>/ 5.0</small></strong>
+            <div class="review-stars" aria-label="평균 평점 4.7점">★★★★★</div>
+          </div>
+          <ul class="review-summary-items">
+            <li><span>커리큘럼 구성</span><strong>4.8</strong></li>
+            <li><span>강사 피드백</span><strong>4.9</strong></li>
+            <li><span>프로젝트 실무성</span><strong>4.7</strong></li>
+          </ul>
+        </div>
+
+        <div class="review-list">
+          <article class="review-card review-frontend">
+            <div class="review-card-top">
+              <div>
+                <p class="review-course">FRONTEND DEVELOPMENT</p>
+                <div class="review-stars" aria-label="평점 4.8점">★★★★★ <span>4.8</span></div>
+              </div>
+              <span class="verified-badge">✓ 과정 수료</span>
+            </div>
+
+            <div class="review-tags">
+              <span>비전공자</span>
+              <span>직무 전환 준비</span>
+              <span>6개월 과정</span>
+            </div>
+
+            <h3>“따라 만드는 수업이 아니라, 왜 이렇게 구현해야 하는지 설명해 줬습니다.”</h3>
+
+            <p class="review-text">
+              수강 전에는 HTML과 CSS 예제만 조금 따라 해 본 수준이라 JavaScript에서 많이 막혔습니다.
+              수업에서는 DOM 조작부터 API 데이터 출력, 반응형 레이아웃까지 기능을 단계별로 나누어 구현했고,
+              매주 코드 리뷰에서 변수명과 구조를 왜 바꿔야 하는지도 구체적으로 피드백받았습니다.
+              특히 팀 프로젝트에서 기획 시안을 실제 화면으로 옮기고 GitHub로 코드를 합치는 과정이 실무를 이해하는 데 가장 도움이 됐습니다.
+            </p>
+
+            <div class="review-detail-grid">
+              <div>
+                <span>가장 만족한 점</span>
+                <strong>코드 리뷰와 반응형 실습</strong>
+              </div>
+              <div>
+                <span>체감 난이도</span>
+                <strong>중간 이상 · 과제량 있음</strong>
+              </div>
+            </div>
+
+            <div class="review-honest">
+              <strong>아쉬웠던 점</strong>
+              <p>JavaScript 과정 중반부터 진도가 빨라 복습 시간이 부족하면 따라가기 어려웠습니다. 대신 보충 자료와 질문 시간을 적극적으로 활용하면 해결할 수 있었습니다.</p>
+            </div>
+
+            <div class="review-result">
+              <span>수료 결과물</span>
+              <p>반응형 기업 홍보 사이트 · 쇼핑몰 UI · 관리자 대시보드</p>
+            </div>
+
+            <div class="review-user">
+              <div class="user-profile">김</div>
+              <div>
+                <strong>김○○ 수강생</strong>
+                <span>프론트엔드 개발자 과정 수료 · 비전공</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card review-backend">
+            <div class="review-card-top">
+              <div>
+                <p class="review-course">BACKEND DEVELOPMENT</p>
+                <div class="review-stars" aria-label="평점 4.7점">★★★★★ <span>4.7</span></div>
+              </div>
+              <span class="verified-badge">✓ 과정 수료</span>
+            </div>
+
+            <div class="review-tags">
+              <span>기초 경험자</span>
+              <span>서버 개발 목표</span>
+              <span>7개월 과정</span>
+            </div>
+
+            <h3>“기능이 작동하는 것에서 끝나지 않고, 안정적인 구조를 고민하게 됐습니다.”</h3>
+
+            <p class="review-text">
+              독학할 때는 게시판 기능을 만들 수는 있었지만 컨트롤러, 서비스, 데이터 접근 코드를 어떻게 나눠야 하는지 몰랐습니다.
+              과정에서는 REST API 설계, SQL 모델링, JWT 인증, 예외 처리와 테스트를 하나의 프로젝트 안에서 연결해 배웠습니다.
+              팀 프로젝트에서 예약 시스템의 동시성 문제와 잘못된 요청 처리를 수정하면서 서버 개발에서 구조와 검증이 중요한 이유를 확실히 이해했습니다.
+            </p>
+
+            <div class="review-detail-grid">
+              <div>
+                <span>가장 만족한 점</span>
+                <strong>API 설계와 DB 피드백</strong>
+              </div>
+              <div>
+                <span>체감 난이도</span>
+                <strong>높음 · 복습 필수</strong>
+              </div>
+            </div>
+
+            <div class="review-honest">
+              <strong>아쉬웠던 점</strong>
+              <p>데이터베이스와 인증 부분은 한 번에 이해하기 어려웠고 개인 실습 시간이 더 길었으면 좋겠다고 느꼈습니다. 프로젝트에서 반복 적용하면서 개념이 정리됐습니다.</p>
+            </div>
+
+            <div class="review-result">
+              <span>수료 결과물</span>
+              <p>회원 인증 API · 예약 관리 서비스 · 커뮤니티 서버</p>
+            </div>
+
+            <div class="review-user">
+              <div class="user-profile">이</div>
+              <div>
+                <strong>이○○ 수강생</strong>
+                <span>백엔드 개발자 과정 수료 · 개발 직무 준비</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card review-ai">
+            <div class="review-card-top">
+              <div>
+                <p class="review-course">AI &amp; DATA ANALYSIS</p>
+                <div class="review-stars" aria-label="평점 4.6점">★★★★★ <span>4.6</span></div>
+              </div>
+              <span class="verified-badge">✓ 과정 수료</span>
+            </div>
+
+            <div class="review-tags">
+              <span>Python 입문</span>
+              <span>데이터 직무 준비</span>
+              <span>6개월 과정</span>
+            </div>
+
+            <h3>“그래프를 만드는 수준에서 벗어나, 결과를 근거 있게 설명하는 방법을 배웠습니다.”</h3>
+
+            <p class="review-text">
+              이전에는 엑셀로 간단한 통계만 다뤘지만 Python과 Pandas를 사용해 실제 데이터를 정제하고 분석하는 과정을 처음부터 배웠습니다.
+              단순히 모델 정확도를 높이는 데 집중하지 않고 데이터 누락과 이상치를 확인하고,
+              평가 지표를 비교한 뒤 분석 결과를 발표 자료로 설명하는 훈련을 반복했습니다.
+              최종 프로젝트에서는 고객 이탈 예측 모델과 대시보드를 함께 제작해 분석의 전체 흐름을 경험했습니다.
+            </p>
+
+            <div class="review-detail-grid">
+              <div>
+                <span>가장 만족한 점</span>
+                <strong>데이터 해석과 발표 피드백</strong>
+              </div>
+              <div>
+                <span>체감 난이도</span>
+                <strong>중간 이상 · 통계 보충 필요</strong>
+              </div>
+            </div>
+
+            <div class="review-honest">
+              <strong>아쉬웠던 점</strong>
+              <p>통계 기초가 부족하면 일부 모델 설명이 어렵게 느껴질 수 있습니다. 기초 수학 보충 자료를 먼저 학습하니 프로젝트 내용을 훨씬 수월하게 이해할 수 있었습니다.</p>
+            </div>
+
+            <div class="review-result">
+              <span>수료 결과물</span>
+              <p>매출 분석 대시보드 · 고객 이탈 예측 · AI 분류 모델 보고서</p>
+            </div>
+
+            <div class="review-user">
+              <div class="user-profile">박</div>
+              <div>
+                <strong>박○○ 수강생</strong>
+                <span>AI·데이터 분석 과정 수료 · 직무 전환 준비</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="review-notice">
+          ※ 현재 페이지의 이름과 후기는 디자인 시안을 위한 예시 콘텐츠입니다.
+          실제 운영 시에는 수강생의 동의를 받은 후기와 확인 가능한 수료 성과로 교체해 주세요.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section"><div class="container contact-inner"><div class="contact-content"><p class="section-label">FREE CONSULTING</p><h2>당신의 다음 기술을<br><span>함께 설계합니다.</span></h2><p>현재 실력과 목표를 분석해 가장 알맞은 학습 경로를 제안합니다. 상담 신청 후 교육 과정과 프로젝트 방향을 자세히 안내해 드립니다.</p><ul class="contact-status"><li><i></i><span>개인별 학습 로드맵</span><strong>READY</strong></li><li><i></i><span>프로젝트 포트폴리오 진단</span><strong>READY</strong></li><li><i></i><span>직무 맞춤 취업 상담</span><strong>READY</strong></li></ul></div><form class="contact-form"><div class="form-group"><label for="user-name">이름</label><input type="text" id="user-name" placeholder="이름을 입력하세요" required></div><div class="form-group"><label for="user-phone">연락처</label><input type="tel" id="user-phone" placeholder="010-0000-0000" required></div><div class="form-group"><label for="course-select">관심 과정</label><select id="course-select"><option value="">과정을 선택하세요</option><option>프론트엔드 개발자 과정</option><option>백엔드 개발자 과정</option><option>AI·데이터 분석 과정</option></select></div><div class="form-group full"><label for="user-message">문의 내용</label><textarea id="user-message" placeholder="궁금한 내용을 작성하세요"></textarea></div><button type="submit" class="button primary-button full">무료 상담 신청하기</button></form></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><div><a href="#home" class="logo footer-logo">CODE<span>UP</span></a><p>실무 중심 IT 교육으로 새로운 가능성을 만듭니다.</p><span class="footer-system">SYSTEM STATUS · ALL SERVICES ONLINE</span></div><div class="footer-information"><p>대표자: 최영욱</p><p>주소: 서울특별시 가온구 미래산업로 27, 코드타워 8층</p><p>전화: 02-1234-5678</p></div></div><div class="footer-bottom">© <span id="current-year"></span> CODEUP ACADEMY. All Rights Reserved.</div></footer>
+</body>
+</html>

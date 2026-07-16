@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+            margin: auto;
+            min-height: 100vh;
+            background-color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .box1{
+            border: 2px solid black;
+            width: 300px;
+            padding: 30px;
+            margin-top: 50px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+      <h1 class="login-title">
+        로그인
+      </h1>
+      <form action="http://127.0.0.1:5500/main.html" target="_blank">
+            <p>
+                이메일
+            </p>
+            <input type="email" placeholder="이메일을 입력해주세요." required>
+            <p>
+                비밀번호
+            </p>
+            <input type="password" placeholder="비밀번호를 입력해주세요." required>
+            
+            <button type="submit">
+                로그인
+            </button> 
+      </form>
+    </div>
+
+</body>
+</html>
