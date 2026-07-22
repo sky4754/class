@@ -107,14 +107,14 @@ function bind(){
                 const timeTd = document.createElement('td');
                 const valueTd = document.createElement('td');
 
-                categoryTd.innerText = we.;
-                timeTd.innerText = we.;
-                valueTd.innerText = we.;
+                categoryTd.innerText = we.category;
+                timeTd.innerText = we.fcstTime;
+                valueTd.innerText = we.fcstTime;
 
                 tr.append(categoryTd);
                 tr.append(timeTd);
                 tr.append(valueTd);
-
+ 
                 result1.append(tr)
             })
             
