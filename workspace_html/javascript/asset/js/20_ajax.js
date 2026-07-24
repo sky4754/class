@@ -5,6 +5,8 @@ function bind(){
     const btn1 = document.querySelector('#btn1')
     btn1.addEventListener('click', function(){
         
+        // debugger
+
         // 1. ajax 객체 생성
         const xhr = new XMLHttpRequest()
 
@@ -220,4 +222,21 @@ function bind(){
             console.log( error )
         })
     })
+
+    const btn6 = document.querySelector('#btn6')
+    btn6.addEventListener('click', function(){
+        debugger
+
+        console.log('btn6 클릭')
+        debug()
+        console.log('끝')
+    })
+
+}
+
+function debug(){
+
+    let a = 1
+    
+    console.log(a)
 }
