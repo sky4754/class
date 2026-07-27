@@ -26,5 +26,42 @@ print( list(f) )
 g = range(10, 0, -1)
 print( list(g) )
 
+a = [0,1,2,3,4,5]
+a = list(range(6))
+
+del a[3]
+print(a)
+
+a = a + [6]
+print(a)
+
+a += [7]
+print(a)
+
+a.append(8)
+print(a)
+
+b = [9,10]
+a.append(b)
+# print(a) # [0, 1, 2, 4, 5, 6, 7, 8, [9, 10]]
+
+c = [654,156,964,15,35]
+c.sort() # 오름차순
+print(c)
+
+c = c[::-1]
+print(c)
+
+c.reverse()
+print(c)
+
+d = c.pop()
+print(c, d)
+
+c.insert(0, 100)
+print(c)
+
+c.insert(10, 200) # index를 벗어나면 꺙 끝에 배치
+print(c)
 
 

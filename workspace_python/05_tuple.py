@@ -9,3 +9,5 @@ print(b, type(b) )
 c = (3,)
 d = 4,
 print(d, type(d) )
+
+

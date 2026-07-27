@@ -4,7 +4,7 @@ print(a)
 b = 5 / 2
 print(b)
 
-# b = 5 / 0 # ZeroDivisionError: division by zero
+# b = 5 / 0 # TypeError: ZeroDivisionError: division by zero
 # print(b)
 
 c = 5 // 2
@@ -28,7 +28,7 @@ print(e)
 print( int(2.4) )
 print( int(-2.4) ) # 소수점 버림.
 print( int('10')+1 )
-# print( int('a')+1 ) # invalid literal for int() with base 10: 'a'
+# print( int('a')+1 ) # TypeError: invalid literal for int() with base 10: 'a'
 
 print(0.12345678901234567890123456789)
 
