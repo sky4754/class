@@ -45,7 +45,7 @@ print( i.find('z') ) # 없으면 -1
 print( i.index('l') )
 # print( i.index('z') ) # ValueError: substring not found # 없으면 에러
 
-print( i.rfind('l') ) # rear 뒤에서 부터 indexOF
+print( i.rfind('l') ) # right 뒤에서 부터 indexOF
 
 print( i.replace('l', 'w') ) # 모두 바꿔 줌
 
@@ -55,6 +55,43 @@ print(k)
 
 m = [1,2,3]
 a, b, c = m
+
+a = ['a','b','c','d']
+b = '-'.join(a)
+print(b)
+c = b.split('-')
+print(c)
+
+a = "Don't Look Back in Anger"
+b = a.find('back')
+print(b)
+
+c = a.upper()
+print(c)
+
+d = a.upper().find('back'.upper())
+print(d)
+
+a = '   a   b  '
+print(a.strip())
+
+print(  '35'.zfill(4) )
+print(  '35000'.zfill(4) )
+
+a = 7
+print( f'{a:03}' )
+print( f'{a:3}' )
+print( f'..{a:<3}..' )
+print( f'..{a:^3}..' )
+
+a = 3.14
+print( f'{a:08.3f}' )
+
+a = 15000
+print( f'{a:,}' )
+
+
+
 
 
 

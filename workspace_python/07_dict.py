@@ -14,9 +14,10 @@ b = {
 }
 print(b)
 
+print('-'*30)
 c = dict(a=10, b=20)
 print(c)
-
+print('-'*30)
 print(b['이름'])
 # print(b['이름2']) # KeyError: '이름2'
 
@@ -58,5 +59,57 @@ print( g )
 a = 'hello'
 print( list(a) )
 print( set(a) ) # {'l', 'o', 'h', 'e'}
+
+
+b = {
+    '이름': 'Halbae',
+    '직업': '방패병',
+    '스킬': {
+        '공격': '방패로 쳐패기',
+        '방어': '방패 들고 방어하기',
+        'javascript': '중'
+    }
+}
+
+b.update(이름='타이거', 직업='강사')
+b.update(이름='타이거', 직업='강사', 나이=20)
+print(b)
+c = b.pop('나이')
+print(b)
+print(c)
+# c = b.pop('나이') # 없으면 에러
+c = b.pop('나이', 0)
+print(c)
+# c = b.pop() # 전달인자 필수 # TypeError: pop expected at least 1 argument, got 0
+# print(c)
+print('-'*30)
+c = b.popitem()
+print(c)
+print(b)
+
+a = ['a', 'b', 'c']
+b = {
+    'a':0,
+    'b':0,
+    'c':0
+}
+
+c = dict.fromkeys(a)
+print(c)
+
+# key만 나온다.
+for i in c :
+    print(i)
+    print(c[i])
+
+for k, v, in c.items() :
+    print(k, v)
+
+print('-'*30)
+
+
+
+
+
 
 

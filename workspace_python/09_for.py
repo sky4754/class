@@ -64,3 +64,35 @@ for a in range(5) :
                 print('-', end='')
     print()
 print('--------------')
+
+
+
+import turtle as t
+t.shape('turtle')
+# t.forward(100)
+# t.right(90)
+# t.left(45)
+
+while True :
+    print(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
