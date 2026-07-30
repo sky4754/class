@@ -73,7 +73,8 @@ match a :
         print('그 외')
 
 
-
+# 표현식
+print( 3 if 3 > 2 else 2)
 
 
 

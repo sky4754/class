@@ -113,7 +113,7 @@ cart = {
     }
 }
 
-a = 0 # 전체
+a = 0 
 
 for i in cart :
     # print(i) # 과일만 출력
@@ -133,7 +133,7 @@ UP/DOWN 게임 만들기
 단, 맞추면 몇번째에 맞췄는지도 출력
 '''
 # import random
-# a = random.randint(1, 99)
+# a = random.randint(1, 100)
 # b = 0
 
 # while True :
@@ -148,7 +148,7 @@ UP/DOWN 게임 만들기
 #         print(f"{b}번째 맞힘..")
 #         break
 
-# print('=-=-'*30)
+print('=-=-'*30)
 
 '''
 문제4
@@ -167,18 +167,55 @@ users = {
     "guest": "guest",
     "user1": "abcd"
 }
-a = users['admin']
-b = input('아이디')
 
-    
+id = 'admin'
+pw = '1234'
+# id = input('ID:')
+# pw = input('PW:')
 
+# key 없으면 에러
+# if users['admin'] == '1234' :
+#     print('로그인 성공')
 
+if id in users :
+    if users[id] == pw :
+        print('로그인 성공')
+    else :
+        print('비밀번호가 틀렸습니다.')
+else :
+    print('아이디가 없습니다.')
 
+print('-'*30)
+'''
+문제5
+랜덤 투표 시스템
+한번에 a, b, c 대상에 랜덤으로 투표
+문제5-1 : 100번의 투표 결과를 출력하시오
+문제5-2 : 그 중 가장 득표 많은 사람의 이름과 득표 수 출력
+'''
 
+a = 0
+b = 0
+c = 0
 
+import random
+for i in range(100): 
+    vote = random.randint(1,3)
+    if vote == 1 :
+        a += 1
+    elif vote == 2 :
+        b += 1
+    elif vote == 3 :
+        c += 1
+print(a,b,c)
 
+후보 = [0,0,0]
 
-
+import random
+for i in range(100):
+    vote = random.randint(0,2)
+    후보[vote] += 1
+print(후보)
 
 
 

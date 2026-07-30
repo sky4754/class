@@ -19,7 +19,6 @@ print("----------------")
 import random
 print(random.random())
 print(random.randint(1,6))
-
 # 주사위 3이 몇번만에 나오는지 출력
 dice = -1
 count = 0
@@ -57,32 +56,68 @@ for a in range(5) :
     print()
 print('--------------')
 for a in range(5) :
-    for b in range(1,5,-1) :
-            if a >= b >= 5 :
+    for b in range(4,-1,-1) :
+            if 0 + a >= b :
                 print('*', end='')
             else :
                 print('-', end='')
     print()
 print('--------------')
 
+for a in range(5):
+    for b in range( 5 - a - 1):
+        print(' ', end='')
+
+    for b in range(a * 2 + 1):
+        print('*', end='')
+
+    print()
+print('--------------')
+
+# for j in range(4,-1,-1) :
+#     # print(j)
+#     for i range(j) :
+#         print('-', end='')
+
+#     k = ((4-j)*2)
 
 
-import turtle as t
-t.shape('turtle')
-# t.forward(100)
-# t.right(90)
-# t.left(45)
+print('--------------')
+# import turtle as t
+# t.shape('turtle')
+# # t.forward(100)
+# # t.right(90)
+# # t.left(45)
 
-while True :
-    print(1)
+# while True :
+#     print(1)
 
-
-
-
-
+print('------------')
 
 
+print('------------')
 
+# c = int(input('피라미드 높이: '))
+
+# for a in range(c):
+#     for b in range( c - a - 1):
+#         print(' ', end='')
+
+#     for b in range(a * 2 + 1):
+#         print('*', end='')
+
+#     print()
+
+print('------------')
+
+for a in range(5):
+    for b in range( 5 - a - 1):
+        print('-', end='')
+
+    for c in range(a * 2 + 1):
+        print('*', end='')
+
+    print()
 
 
 
